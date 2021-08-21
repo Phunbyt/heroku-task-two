@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FUNBI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+</style>
+<title>FUNBI</title>
 </head>
 <body>
-    <h1>Raji Oluwafunbi</h1>
-</body>
-</html>
+
+
+
+
+<div id="myDIV" onclick="myFunction()">
+Click here to see my name
+</div>
+<div id="mySecDIV" onclick="myFunction()" style="display:none;">
+<h1>Raji Oluwafunbi</h1>
+<p>click here to close</p>
+</div>
+
+
+
+<script>
+function myFunction() {
+  let x = document.getElementById("myDIV");
+  let y = document.getElementById("mySecDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+  } else {
+    y.style.display = "block";
+    x.style.display = "none";
+  }
+}
+</script>
